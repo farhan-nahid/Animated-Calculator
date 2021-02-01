@@ -89,6 +89,7 @@ input[type="number"] {
   border-right: 1px solid rgba(255, 255, 255, 0.02);
   transition: 0.5s;
   text-align: center;
+  padding: 20px;
 }
 
 .container .calculator span:hover {
@@ -112,6 +113,7 @@ input[type="number"] {
 .container .calculator .plus {
   grid-row: span 2;
   height: 150px;
+  padding-top: 75px;
 }
 
 .container .calculator .equal {

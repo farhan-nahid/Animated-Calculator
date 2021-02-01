@@ -16,26 +16,36 @@
     <main>
       <section>
         <div class="container">
-          <form action="" class="calculator">
-            <input type="number" name="number" class="value" id="" />
-            <span class="num clear">C</span>
-            <span class="num">/</span>
-            <span class="num">*</span>
-            <span class="num">7</span>
-            <span class="num">8</span>
-            <span class="num">9</span>
-            <span class="num">-</span>
-            <span class="num">4</span>
-            <span class="num">5</span>
-            <span class="num">6</span>
-            <span class="num plus">+</span>
-            <span class="num">1</span>
-            <span class="num">2</span>
-            <span class="num">3</span>
-            <span class="num">0</span>
-            <span class="num">00</span>
-            <span class="num">.</span>
-            <span class="num equal">=</span>
+          <form action="" class="calculator" name="calc" id="calculator__keys">
+            <input
+              type="text"
+              name="number"
+              class="value"
+              value="0"
+              id="calculator-output"
+            />
+            <span class="num clear" onclick="calc.number.value=''">C</span>
+            <span class="num" onclick="calc.number.value+='/'">/</span>
+            <span class="num" onclick="calc.number.value+='*'">*</span>
+            <span class="num" onclick="calc.number.value+='7'">7</span>
+            <span class="num" onclick="calc.number.value+='8'">8</span>
+            <span class="num" onclick="calc.number.value+='9'">9</span>
+            <span class="num" onclick="calc.number.value+='-'">-</span>
+            <span class="num" onclick="calc.number.value+='4'">4</span>
+            <span class="num" onclick="calc.number.value+='5'">5</span>
+            <span class="num" onclick="calc.number.value+='6'">6</span>
+            <span class="num plus" onclick="calc.number.value+='+'">+</span>
+            <span class="num" onclick="calc.number.value+='1'">1</span>
+            <span class="num" onclick="calc.number.value+='2'">2</span>
+            <span class="num" onclick="calc.number.value+='3'">3</span>
+            <span class="num" onclick="calc.number.value+='0'">0</span>
+            <span class="num" onclick="calc.number.value+='00'">00</span>
+            <span class="num" onclick="calc.number.value+='.'">.</span>
+            <span
+              class="num equal"
+              onclick="calc.number.value= eval(calc.number.value)"
+              >=</span
+            >
           </form>
         </div>
       </section>
