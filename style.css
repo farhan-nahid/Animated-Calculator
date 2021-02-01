@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #091921;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#e91e93, #ffc107);
+  clip-path: circle(20% at 30% 10%);
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(#ffffff, #da00ff);
+  clip-path: circle(20% at 70% 90%);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.container {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  border-left: 1px solid rgba(255, 255, 255, 0.02);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+.container .calculator {
+  position: relative;
+  display: grid;
+}
+
+.container .calculator .value {
+  grid-column: span 4;
+  height: 150px;
+  width: 300px;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 30px;
+  background-color: transparent;
+  color: #ffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.container .calculator span {
+  display: grid;
+  width: 75px;
+  height: 75px;
+  color: #ffff;
+  font-weight: 400;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  border-right: 1px solid rgba(255, 255, 255, 0.02);
+  transition: 0.5s;
+  text-align: center;
+}
+
+.container .calculator span:hover {
+  transition: 0s;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.container .calculator span:active {
+  background-color: #14ff47;
+  color: #192f00;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.container .calculator .clear {
+  grid-column: span 2;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.container .calculator .plus {
+  grid-row: span 2;
+  height: 150px;
+}
+
+.container .calculator .equal {
+  background-color: rgba(255, 255, 255, 0.05);
+}
